@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:scaleType="fillCenter" />
+
+    <!-- Top: status + countdown -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#CC000000"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCountdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FF9800"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Bottom: all controls -->
+    <LinearLayout
+        android:id="@+id/layoutControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#CC000000"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Stance label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STANCE"
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Stance buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <Button
+                android:id="@+id/btnOrthodox"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Orthodox"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:backgroundTint="#1565C0"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnSouthpaw"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Southpaw"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:backgroundTint="#6A1B9A" />
+
+        </LinearLayout>
+
+        <!-- Duration label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DURATION"
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Duration buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnDuration10"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="10s"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#444444"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnDuration15"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="15s"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#444444"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnDuration30"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="30s"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#444444" />
+
+        </LinearLayout>
+
+        <!-- Start button -->
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="START"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#43A047" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
